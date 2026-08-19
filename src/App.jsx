@@ -3,7 +3,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   LineChart, Line, Cell
 } from "recharts";
-import { Plus, TrendingUp, TrendingDown, Scissors, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Plus, TrendingUp, TrendingDown, Scissors, X, ChevronDown, ChevronUp, Pencil } from "lucide-react";
 
 const SEED_LOG = [{"tournament": "Major League Cricket", "date": "2026-07-19", "match": "LAKR vs WF", "exchange": "Smarkets", "stake": 116.35, "lossCut": "Yes", "gross": 83.65, "net": 81.98, "roi": 0.7045724108, "cumulative": 81.98, "note": "Did trade without prediction. Just guessed that this will be see-saw. So did unmatched losscut on bothsides when the match is on equal strength and when one of them is matched then i did the bet in other side like my intention is to make more that \u00a320 cause my i did losscut for \u00a319. If its \u00a31 profit then its fine. I have just waited for the perfect odd and placed the bet on 1.95 with the liability of \u00a397.34. This match last until last ball 3runs needed for 1 ball and its runout. LAKR won."}, {"tournament": "Pondichery Premier League", "date": "2026-07-21", "match": "KAK vs MMS", "exchange": "Smarkets", "stake": 23.99, "lossCut": "No", "gross": -23.99, "net": -23.99, "roi": -1.0, "cumulative": 57.99, "note": "Try to trade without prediction. Cause of last match profit. "}, {"tournament": "The Hundred", "date": "2026-07-21", "match": "MIL vs SRL", "exchange": "Betfair", "stake": 15.0, "lossCut": "No", "gross": -15.0, "net": -15.0, "roi": -1.0, "cumulative": 42.99, "note": "Try to trade without prediction. Cause I can make new strategy. But its the usual bettors mindset. No more selfshit."}, {"tournament": "The Hundred", "date": "2026-07-22", "match": "SB vs WF", "exchange": "Smarkets", "stake": 84.58, "lossCut": "Yes", "gross": 2.81, "net": 2.75, "roi": 0.03255852447387089, "cumulative": 45.74, "note": "Same same. I am just loosing my own prediction made money. Thats it. Odds moved and i protected my capital."}, {"tournament": "Lanka Premier League", "date": "2026-07-25", "match": "KR vs GM", "exchange": "Betfair", "stake": 100.0, "lossCut": "No", "gross": 50.0, "net": 47.5, "roi": 0.475, "cumulative": 93.24, "note": "Anna said today no prediction cause of coimbatore journey. But gut wont stop me."}, {"tournament": "The Hundred", "date": "2026-07-25", "match": "SRL vs SB", "exchange": "Betfair", "stake": 120.0, "lossCut": "Yes", "gross": -13.0, "net": -13.0, "roi": -0.10833333333333334, "cumulative": 80.24, "note": "Again"}, {"tournament": "Lanka Premier League", "date": "2026-07-25", "match": "CK vs DS", "exchange": "Betfair", "stake": 139.02, "lossCut": "Yes", "gross": 28.16, "net": 26.75, "roi": 0.19243274349014527, "cumulative": 106.99, "note": "Again"}, {"tournament": "The Hundred", "date": "2026-07-25", "match": "WF vs MIL", "exchange": "Betfair", "stake": 112.05, "lossCut": "Yes", "gross": 20.1, "net": 19.09, "roi": 0.17041499330655957, "cumulative": 126.09, "note": "Again.Today without getting prediction and traded on 4 matches with \u00a3120 each gives me \u00a380.35"}, {"tournament": "Global Super League", "date": "2026-07-26", "match": "DV vs GAW", "exchange": "Betfair", "stake": 109.0, "lossCut": "Yes", "gross": 0.0, "net": 0.0, "roi": 0.0, "cumulative": 126.09, "note": "Losscut matched first. Then i entered."}, {"tournament": "Global Super League", "date": "2026-07-26", "match": "DV vs GAW", "exchange": "Smarkets", "stake": 119.0, "lossCut": "Yes", "gross": -0.28, "net": -0.28, "roi": -0.0023529411764705885, "cumulative": 125.81, "note": "Losscut matched first. Then i entered."}, {"tournament": "Maharani T20 Trophy", "date": "2026-07-26", "match": "MW vs HT", "exchange": "Betfair", "stake": 19.0, "lossCut": "No", "gross": -19.0, "net": -19.0, "roi": -1.0, "cumulative": 106.81, "note": "Did the bet at 3.3overs. And waited for the odds. But won't rise up even to protect my capital."}, {"tournament": "Global Super League", "date": "2026-07-27", "match": "GAW vs LQ", "exchange": "Betfair", "stake": 19.0, "lossCut": "No", "gross": -19.0, "net": -19.0, "roi": -1.0, "cumulative": 87.81, "note": "I forget that i placed the ummatched bet and slept at night . Morning i realized by saw the account balance in the morning."}, {"tournament": "Global Super League", "date": "2026-07-28", "match": "DV vs SFU", "exchange": "Betfair", "stake": 114.0, "lossCut": "Yes", "gross": 1.0, "net": 0.95, "roi": 0.008333333333333333, "cumulative": 88.76, "note": null}, {"tournament": "The Hundred", "date": "2026-07-28", "match": "MSG vs SL", "exchange": "Betfair", "stake": 371.98, "lossCut": "Yes", "gross": 0.02, "net": 0.02, "roi": 5.107801494704016e-05, "cumulative": 88.78, "note": null}, {"tournament": "Europian cricket", "date": "2026-07-29", "match": "EL vs AC", "exchange": "Betfair", "stake": 4.0, "lossCut": "No", "gross": -4.0, "net": -4.0, "roi": -1.0, "cumulative": 84.78, "note": null}, {"tournament": "Lanka Premier League", "date": "2026-07-29", "match": "KR vs GG", "exchange": "Betfair", "stake": 13.0, "lossCut": "Yes", "gross": 25.0, "net": 23.75, "roi": 1.8269230769230769, "cumulative": 108.53, "note": "It went well like roller Coaster"}, {"tournament": "Global Super League", "date": "2026-07-30", "match": "PS vs GAW", "exchange": "Smarkets", "stake": 18.0, "lossCut": "Yes", "gross": 0.41, "net": 0.4, "roi": 0.022322222222222222, "cumulative": 108.93, "note": "Did someunmatched bets and slept"}, {"tournament": "The Hundred Women", "date": "2026-07-31", "match": "TR vs MSG", "exchange": "Smarkets", "stake": 17.99, "lossCut": "Yes", "gross": 0.73, "net": 0.72, "roi": 0.039766536964980545, "cumulative": 109.64, "note": "I protected my capital. Just that. I can made profit on that point but i have waited for better odds. Thats fine."}, {"tournament": "The Hundred", "date": "2026-07-31", "match": "TR vs MSG", "exchange": "Smarkets", "stake": 17.99, "lossCut": "No", "gross": -17.99, "net": -17.99, "roi": -1.0, "cumulative": 91.65, "note": null}, {"tournament": "Global Super League", "date": "2026-08-01", "match": "SFU vs DV", "exchange": "Betfair", "stake": 57.0, "lossCut": "Yes", "gross": 8.0, "net": 7.6, "roi": 0.13333333333333333, "cumulative": 99.25, "note": "Got the money back at the edge. Iam playing for money and my mind is going on like you dont have to lose the money. You dont have to lose the money. My mind is in fear of losing the money. This way im not for this game now."}, {"tournament": "Lanka Premier League", "date": "2026-08-05", "match": "JK vs GG", "exchange": "Betfair", "stake": 30.0, "lossCut": "Yes", "gross": 12.49, "net": 11.87, "roi": 0.3955166666666666, "cumulative": 111.12, "note": null}, {"tournament": "The Hundred", "date": "2026-08-06", "match": "LS vs MIL", "exchange": "Betfair", "stake": 360.0, "lossCut": "No", "gross": 66.6, "net": 63.27, "roi": 0.17574999999999996, "cumulative": 174.39, "note": "Blind betting won."}, {"tournament": "International Twenty20 Matches", "date": "2026-08-06", "match": "Maxico vs Panama", "exchange": "Betfair", "stake": 359.35, "lossCut": "No", "gross": 12.53, "net": 11.9, "roi": 0.033125086962571305, "cumulative": 186.29, "note": "Bet at last"}, {"tournament": "International Twenty20 Matches", "date": "2026-08-06", "match": "Maxico vs Panama", "exchange": "Smarkets", "stake": 1.74, "lossCut": "No", "gross": -1.74, "net": -1.74, "roi": -1.0, "cumulative": 184.55, "note": null}, {"tournament": "Metro cup", "date": "2026-08-07", "match": "Essex vs Glamorgan", "exchange": "Betfair", "stake": 360.0, "lossCut": "No", "gross": 1.5, "net": 1.42, "roi": 0.003958333333333333, "cumulative": 185.98, "note": "Chaos happened"}, {"tournament": "Caribbean Premier League", "date": "2026-08-08", "match": "ABF vs JKM", "exchange": "Betfair", "stake": 361.0, "lossCut": "No", "gross": 121.84, "net": 115.75, "roi": 0.32063157894736843, "cumulative": 301.73, "note": "No losscut. 1ball, 2 runs needed. Did 2. Match ended. Perfect."}, {"tournament": "The Hundred Women", "date": "2026-08-08", "match": "TR vs MIL", "exchange": "Betfair", "stake": 360.0, "lossCut": "No", "gross": 55.25, "net": 52.49, "roi": 0.14579861111111111, "cumulative": 354.21, "note": "Did trade at a end"}, {"tournament": "TamilNadu Premier League ", "date": "2026-08-08", "match": "MP vs LKK", "exchange": "Betfair", "stake": 360.0, "lossCut": "No", "gross": -289.67, "net": -289.67, "roi": -0.8046388888888889, "cumulative": 64.54, "note": "Did 18trades and lost these much. By not doing the losscut."}, {"tournament": "Caribbean Premier League ", "date": "2026-08-09", "match": "SKNP vs TKR", "exchange": "Betfair", "stake": 21.0, "lossCut": "No", "gross": -21.0, "net": -21.0, "roi": -1.0, "cumulative": 43.54, "note": "One side match. I an sure by the analytics that TKR is much more stornger even though i did the losscut. I want to know this is good or bad"}, {"tournament": "The Hundred women", "date": "2026-08-10", "match": "TR W vs SB W", "exchange": "Betfair", "stake": 25.6, "lossCut": "Yes", "gross": 14.4, "net": 13.68, "roi": 0.5343749999999999, "cumulative": 57.22, "note": "Did proper los ut and got the profit."}, {"tournament": "The Hundred", "date": "2026-08-10", "match": "SB vs TR", "exchange": "Betfair", "stake": 296.0, "lossCut": "Yes", "gross": 114.0, "net": 108.3, "roi": 0.3658783783783784, "cumulative": 165.52, "note": "Got the profit by the the middle of the match. It was a high favourable matches for TR then odds came and i did losscut and bet against them. "}, {"tournament": "Caribbean Premier League ", "date": "2026-08-14", "match": "JKM vs GAW", "exchange": "Betfair", "stake": 60.0, "lossCut": "No", "gross": -60.0, "net": -60.0, "roi": -1.0, "cumulative": 105.52, "note": "Try to do the losscut. Then the odds goes one side."}, {"tournament": "The Hundred Women", "date": "2026-08-14", "match": "SRL W vs SB W", "exchange": "Betfair", "stake": 315.0, "lossCut": "No", "gross": 45.0, "net": 42.75, "roi": 0.1357142857142857, "cumulative": 148.27, "note": "49 run needed in 51 balls. Match won."}];
 
@@ -58,6 +58,47 @@ function computeLiability(betType, stake, odds) {
   return s;
 }
 
+function parseTeams(matchStr) {
+  if (!matchStr) return ["Side A", "Side B"];
+  const parts = matchStr.split(/\s+vs\.?\s+/i);
+  if (parts.length === 2 && parts[0].trim() && parts[1].trim()) {
+    return [parts[0].trim(), parts[1].trim()];
+  }
+  return ["Side A", "Side B"];
+}
+
+// Computes gross profit/loss on each outcome, like Betfair's bet-slip "if this selection wins" view.
+function computeOutcomes(legs) {
+  let sideAWins = 0;
+  let sideBWins = 0;
+  legs.forEach((leg) => {
+    const stake = Number(leg.stake) || 0;
+    const odds = Number(leg.odds) || 0;
+    if (!stake || !odds) return;
+    const isBack = leg.betType === "Back";
+    const onA = (leg.side || "A") === "A";
+    const winGain = stake * (odds - 1);
+    if (onA) {
+      if (isBack) {
+        sideAWins += winGain;
+        sideBWins -= stake;
+      } else {
+        sideAWins -= winGain;
+        sideBWins += stake;
+      }
+    } else {
+      if (isBack) {
+        sideBWins += winGain;
+        sideAWins -= stake;
+      } else {
+        sideBWins -= winGain;
+        sideAWins += stake;
+      }
+    }
+  });
+  return { sideAWins, sideBWins };
+}
+
 const STORAGE_KEY = "exchange-ledger:entries";
 
 export default function App() {
@@ -66,6 +107,7 @@ export default function App() {
   const [tab, setTab] = useState("dashboard");
   const [exchangeFilter, setExchangeFilter] = useState("All");
   const [formOpen, setFormOpen] = useState(false);
+  const [editingEntry, setEditingEntry] = useState(null);
   const [expandedNote, setExpandedNote] = useState(null);
   const [saveState, setSaveState] = useState("idle");
 
@@ -95,9 +137,11 @@ export default function App() {
     }
   }, []);
 
-  const addEntry = useCallback((entry) => {
+  const saveEntry = useCallback((entry) => {
     setEntries((prev) => {
-      const next = [entry, ...(prev || [])];
+      const list = prev || [];
+      const exists = list.some((e) => e.id === entry.id);
+      const next = exists ? list.map((e) => (e.id === entry.id ? entry : e)) : [entry, ...list];
       persist(next);
       return next;
     });
@@ -110,6 +154,21 @@ export default function App() {
       return next;
     });
   }, [persist]);
+
+  const openEdit = useCallback((entry) => {
+    setEditingEntry(entry);
+    setFormOpen(true);
+  }, []);
+
+  const closeForm = useCallback(() => {
+    setFormOpen(false);
+    setEditingEntry(null);
+  }, []);
+
+  const deleteFromForm = useCallback(() => {
+    if (editingEntry) deleteEntry(editingEntry.id);
+    closeForm();
+  }, [editingEntry, deleteEntry, closeForm]);
 
   const filtered = useMemo(() => {
     if (!entries) return [];
@@ -283,7 +342,7 @@ export default function App() {
         <main style={styles.main}>
           <div style={styles.logHeader}>
             <div style={styles.panelTitle}>LEDGER · {filtered.length} ENTRIES</div>
-            <button style={styles.addBtn} onClick={() => setFormOpen(true)}>
+            <button style={styles.addBtn} onClick={() => { setEditingEntry(null); setFormOpen(true); }}>
               <Plus size={16} /> Log a trade
             </button>
           </div>
@@ -329,7 +388,14 @@ export default function App() {
                       </td>
                       <td style={styles.td}>
                         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                          {e.note ? (expandedNote === e.id ? <ChevronUp size={14} /> : <ChevronDown size={14} />) : null}
+                          {(e.note || (e.legs && e.legs.length > 1)) ? (expandedNote === e.id ? <ChevronUp size={14} /> : <ChevronDown size={14} />) : null}
+                          <button
+                            onClick={(ev) => { ev.stopPropagation(); openEdit(e); }}
+                            style={styles.editBtn}
+                            aria-label="Edit entry"
+                          >
+                            <Pencil size={13} />
+                          </button>
                           {!e.historic && (
                             <button
                               onClick={(ev) => { ev.stopPropagation(); deleteEntry(e.id); }}
@@ -342,9 +408,28 @@ export default function App() {
                         </div>
                       </td>
                     </tr>
-                    {expandedNote === e.id && e.note && (
+                    {expandedNote === e.id && (e.note || (e.legs && e.legs.length > 1)) && (
                       <tr>
-                        <td colSpan={10} style={styles.noteRow}>{e.note}</td>
+                        <td colSpan={10} style={styles.noteRow}>
+                          {e.legs && e.legs.length > 1 && (
+                            <div style={{ marginBottom: e.note ? 10 : 0 }}>
+                              <div style={{ fontSize: 10.5, letterSpacing: 0.8, color: "#F2B705", fontWeight: 700, marginBottom: 6 }}>
+                                BET LEGS
+                              </div>
+                              {e.legs.map((l, i) => {
+                                const [tA, tB] = parseTeams(e.match);
+                                const sideLabel = l.side === "B" ? tB : tA;
+                                return (
+                                  <div key={i} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12.5, marginBottom: 2, display: "flex", alignItems: "center", gap: 6 }}>
+                                    {l.lossCut && <Scissors size={11} color="#F2B705" />}
+                                    {l.betType} {sideLabel} · odds {l.odds || "—"} · {fmtGBP(l.stake)}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+                          {e.note}
+                        </td>
                       </tr>
                     )}
                   </React.Fragment>
@@ -355,7 +440,7 @@ export default function App() {
         </main>
       )}
 
-      {formOpen && <AddTradeForm onClose={() => setFormOpen(false)} onSave={addEntry} />}
+      {formOpen && <AddTradeForm onClose={closeForm} onSave={saveEntry} onDelete={editingEntry ? deleteFromForm : null} initialEntry={editingEntry} />}
     </div>
   );
 }
@@ -413,21 +498,74 @@ function ExchangeBreakdown({ entries }) {
   );
 }
 
-function AddTradeForm({ onClose, onSave }) {
-  const [form, setForm] = useState({
-    tournament: "",
-    date: new Date().toISOString().slice(0, 10),
-    match: "",
-    exchange: "Betfair",
-    betType: "Back",
-    stake: "",
-    odds: "",
-    gross: "",
-    lossCut: false,
-    note: "",
+function AddTradeForm({ onClose, onSave, onDelete, initialEntry }) {
+  const isEditing = !!initialEntry;
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+
+  const [form, setForm] = useState(() => {
+    if (initialEntry) {
+      return {
+        tournament: initialEntry.tournament === "Uncategorised" ? "" : (initialEntry.tournament || ""),
+        date: initialEntry.date || new Date().toISOString().slice(0, 10),
+        match: initialEntry.match || "",
+        exchange: initialEntry.exchange || "Betfair",
+        gross: initialEntry.gross !== undefined && initialEntry.gross !== null ? String(initialEntry.gross) : "",
+        lossCut: !!initialEntry.lossCut,
+        note: initialEntry.note || "",
+      };
+    }
+    return {
+      tournament: "",
+      date: new Date().toISOString().slice(0, 10),
+      match: "",
+      exchange: "Betfair",
+      gross: "",
+      lossCut: false,
+      note: "",
+    };
   });
 
-  const liability = computeLiability(form.betType, form.stake, form.odds);
+  const [legs, setLegs] = useState(() => {
+    if (initialEntry) {
+      if (initialEntry.legs && initialEntry.legs.length > 0) {
+        return initialEntry.legs.map((l) => ({
+          id: uid(),
+          side: l.side || "A",
+          betType: l.betType || "Back",
+          odds: l.odds !== undefined && l.odds !== null && l.odds !== "" ? String(l.odds) : "",
+          stake: l.stake !== undefined && l.stake !== null ? String(l.stake) : "",
+          lossCut: !!l.lossCut,
+        }));
+      }
+      return [{
+        id: uid(),
+        side: "A",
+        betType: initialEntry.betType && initialEntry.betType !== "Multi" ? initialEntry.betType : "Back",
+        odds: initialEntry.odds ? String(initialEntry.odds) : "",
+        stake: initialEntry.stake !== undefined && initialEntry.stake !== null ? String(initialEntry.stake) : "",
+        lossCut: !!initialEntry.lossCut,
+      }];
+    }
+    return [{ id: uid(), side: "A", betType: "Back", odds: "", stake: "", lossCut: false }];
+  });
+
+  const addLeg = () => {
+    setLegs((prev) => [...prev, { id: uid(), side: "A", betType: "Back", odds: "", stake: "", lossCut: false }]);
+  };
+  const removeLeg = (id) => {
+    setLegs((prev) => (prev.length > 1 ? prev.filter((l) => l.id !== id) : prev));
+  };
+  const updateLeg = (id, field, value) => {
+    setLegs((prev) => prev.map((l) => (l.id === id ? { ...l, [field]: value } : l)));
+  };
+
+  const [teamA, teamB] = useMemo(() => parseTeams(form.match), [form.match]);
+  const totalStake = legs.reduce((s, l) => s + (Number(l.stake) || 0), 0);
+  const totalLiability = legs.reduce((s, l) => s + computeLiability(l.betType, l.stake, l.odds), 0);
+  const anyLegLossCut = legs.some((l) => l.lossCut);
+  const { sideAWins, sideBWins } = useMemo(() => computeOutcomes(legs), [legs]);
+  const netIfAWins = computeNet(sideAWins, form.exchange);
+  const netIfBWins = computeNet(sideBWins, form.exchange);
   const net = computeNet(form.gross, form.exchange);
 
   const set = (k) => (ev) => {
@@ -435,25 +573,29 @@ function AddTradeForm({ onClose, onSave }) {
     setForm((f) => ({ ...f, [k]: v }));
   };
 
-  const canSave = form.match.trim() && form.stake !== "" && form.date;
+  const canSave = form.match.trim() && totalStake > 0 && form.date;
 
   const handleSave = () => {
     if (!canSave) return;
+    const cleanLegs = legs
+      .filter((l) => l.stake !== "" || l.odds !== "")
+      .map((l) => ({ side: l.side, betType: l.betType, odds: l.odds, stake: Number(l.stake) || 0, lossCut: !!l.lossCut }));
     onSave({
-      id: uid(),
+      id: initialEntry ? initialEntry.id : uid(),
       tournament: form.tournament || "Uncategorised",
       date: form.date,
       match: form.match,
       exchange: form.exchange,
-      betType: form.betType,
-      stake: Number(form.stake) || 0,
-      odds: form.odds,
-      liability,
-      lossCut: !!form.lossCut,
+      betType: cleanLegs.length > 1 ? "Multi" : (cleanLegs[0]?.betType || "Back"),
+      stake: totalStake,
+      odds: cleanLegs.length === 1 ? cleanLegs[0].odds : "",
+      liability: totalLiability,
+      legs: cleanLegs,
+      lossCut: !!form.lossCut || anyLegLossCut,
       gross: Number(form.gross) || 0,
       net,
       note: form.note,
-      historic: false,
+      historic: initialEntry ? !!initialEntry.historic : false,
     });
     onClose();
   };
@@ -462,7 +604,7 @@ function AddTradeForm({ onClose, onSave }) {
     <div style={styles.modalOverlay} onClick={onClose}>
       <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div style={styles.modalHeader}>
-          <div style={styles.panelTitle}>LOG A TRADE</div>
+          <div style={styles.panelTitle}>{isEditing ? "EDIT TRADE" : "LOG A TRADE"}</div>
           <button style={styles.iconBtn} onClick={onClose}><X size={18} /></button>
         </div>
 
@@ -481,39 +623,122 @@ function AddTradeForm({ onClose, onSave }) {
               {EXCHANGES.map((ex) => <option key={ex} value={ex}>{ex}</option>)}
             </select>
           </Field>
-          <Field label="Bet type">
-            <div style={styles.segmented}>
-              {["Back", "Lay"].map((bt) => (
-                <button
-                  key={bt}
-                  style={{ ...styles.segBtn, ...(form.betType === bt ? styles.segBtnActive : {}) }}
-                  onClick={() => setForm((f) => ({ ...f, betType: bt }))}
-                  type="button"
-                >
-                  {bt}
-                </button>
+          <Field label="Bet legs — tag each leg's side, tap loss-cut ones" full>
+            <div style={styles.legsWrap}>
+              {legs.map((leg, i) => (
+                <div key={leg.id} style={styles.legCard}>
+                  <div style={styles.legTopRow}>
+                    <div style={styles.legSegmented}>
+                      {[["A", teamA], ["B", teamB]].map(([val, label]) => (
+                        <button
+                          key={val}
+                          type="button"
+                          style={{ ...styles.legSegBtn, ...(leg.side === val ? styles.segBtnActive : {}) }}
+                          onClick={() => updateLeg(leg.id, "side", val)}
+                          title={label}
+                        >
+                          {label.length > 12 ? label.slice(0, 11) + "…" : label}
+                        </button>
+                      ))}
+                    </div>
+                    <div style={styles.legSegmented}>
+                      {["Back", "Lay"].map((bt) => (
+                        <button
+                          key={bt}
+                          type="button"
+                          style={{ ...styles.legSegBtn, ...(leg.betType === bt ? styles.segBtnActive : {}) }}
+                          onClick={() => updateLeg(leg.id, "betType", bt)}
+                        >
+                          {bt}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={styles.legRow}>
+                    <input
+                      type="number" step="0.01" style={styles.legInput}
+                      value={leg.odds} onChange={(e) => updateLeg(leg.id, "odds", e.target.value)}
+                      placeholder="Odds"
+                    />
+                    <input
+                      type="number" step="0.01" style={styles.legInput}
+                      value={leg.stake} onChange={(e) => updateLeg(leg.id, "stake", e.target.value)}
+                      placeholder="Stake £"
+                    />
+                    <button
+                      type="button"
+                      style={{ ...styles.legScissorsBtn, ...(leg.lossCut ? styles.legScissorsActive : {}) }}
+                      onClick={() => updateLeg(leg.id, "lossCut", !leg.lossCut)}
+                      aria-label="Mark as loss-cut"
+                      title="Mark as loss-cut"
+                    >
+                      <Scissors size={14} />
+                    </button>
+                    <button
+                      type="button"
+                      style={{ ...styles.legRemoveBtn, opacity: legs.length > 1 ? 1 : 0.3 }}
+                      onClick={() => removeLeg(leg.id)}
+                      disabled={legs.length <= 1}
+                      aria-label="Remove leg"
+                    >
+                      <X size={14} />
+                    </button>
+                  </div>
+                </div>
               ))}
+              <button type="button" style={styles.addLegBtn} onClick={addLeg}>
+                <Plus size={14} /> Add another odds
+              </button>
+              <div style={styles.legHint}>
+                Tap <Scissors size={11} style={{ verticalAlign: "-1px" }} /> on a leg to mark it as a loss-cut bet
+              </div>
             </div>
           </Field>
-          <Field label="Odds taken">
-            <input type="number" step="0.01" style={styles.input} value={form.odds} onChange={set("odds")} placeholder="1.95" />
+          <Field label="Total stake (auto)">
+            <div style={styles.readout}>{fmtGBP(totalStake)}</div>
           </Field>
-          <Field label="Stake (£)">
-            <input type="number" step="0.01" style={styles.input} value={form.stake} onChange={set("stake")} placeholder="100.00" />
+          <Field label="Total liability (auto)">
+            <div style={styles.readout}>{fmtGBP(totalLiability)}</div>
           </Field>
-          <Field label="Liability (auto)">
-            <div style={styles.readout}>{fmtGBP(liability)}</div>
+
+          <Field label="Book outcome (like Betfair's slip)" full>
+            <div style={styles.outcomeGrid}>
+              <button
+                type="button"
+                style={styles.outcomeCard}
+                onClick={() => setForm((f) => ({ ...f, gross: String(Math.round(sideAWins * 100) / 100) }))}
+              >
+                <div style={styles.outcomeLabel}>IF {teamA.toUpperCase()} WINS</div>
+                <div style={{ ...styles.outcomeValue, color: sideAWins >= 0 ? "#3FB68B" : "#E85D5D" }}>
+                  {fmtGBP(sideAWins)}
+                </div>
+                <div style={styles.outcomeSub}>net after comm. {fmtGBP(netIfAWins)}</div>
+              </button>
+              <button
+                type="button"
+                style={styles.outcomeCard}
+                onClick={() => setForm((f) => ({ ...f, gross: String(Math.round(sideBWins * 100) / 100) }))}
+              >
+                <div style={styles.outcomeLabel}>IF {teamB.toUpperCase()} WINS</div>
+                <div style={{ ...styles.outcomeValue, color: sideBWins >= 0 ? "#3FB68B" : "#E85D5D" }}>
+                  {fmtGBP(sideBWins)}
+                </div>
+                <div style={styles.outcomeSub}>net after comm. {fmtGBP(netIfBWins)}</div>
+              </button>
+            </div>
+            <div style={styles.legHint}>Tap whichever side actually won to fill in the profit/loss field below</div>
           </Field>
-          <Field label="Gross P/L (£)">
+
+          <Field label="Profit / loss for this match (£)" full>
             <input type="number" step="0.01" style={styles.input} value={form.gross} onChange={set("gross")} placeholder="e.g. -20 or 45.50" />
           </Field>
-          <Field label={`Net P/L (auto, ${(COMMISSION[form.exchange] * 100).toFixed(0)}% comm.)`}>
+          <Field label={`Net after commission (auto, ${(COMMISSION[form.exchange] * 100).toFixed(0)}% on ${form.exchange})`}>
             <div style={{ ...styles.readout, color: net >= 0 ? "#3FB68B" : "#E85D5D" }}>{fmtGBP(net)}</div>
           </Field>
           <Field label="Loss-cut executed?">
             <label style={styles.checkboxRow}>
-              <input type="checkbox" checked={form.lossCut} onChange={set("lossCut")} />
-              <span>Yes, I cut losses on this trade</span>
+              <input type="checkbox" checked={form.lossCut || anyLegLossCut} onChange={set("lossCut")} disabled={anyLegLossCut} />
+              <span>{anyLegLossCut ? "Auto-marked — a leg above is tagged as loss-cut" : "Yes, I cut losses on this trade"}</span>
             </label>
           </Field>
           <Field label="Notes" full>
@@ -522,10 +747,27 @@ function AddTradeForm({ onClose, onSave }) {
         </div>
 
         <div style={styles.modalFooter}>
-          <button style={styles.cancelBtn} onClick={onClose}>Cancel</button>
-          <button style={{ ...styles.addBtn, opacity: canSave ? 1 : 0.5 }} onClick={handleSave} disabled={!canSave}>
-            Save trade
-          </button>
+          {isEditing && onDelete ? (
+            confirmingDelete ? (
+              <div style={styles.deleteConfirmRow}>
+                <span style={styles.deleteConfirmText}>Delete this trade?</span>
+                <button style={styles.deleteConfirmYes} onClick={onDelete}>Yes, delete</button>
+                <button style={styles.deleteConfirmNo} onClick={() => setConfirmingDelete(false)}>No</button>
+              </div>
+            ) : (
+              <button style={styles.deleteTradeBtn} onClick={() => setConfirmingDelete(true)}>
+                <X size={14} /> Delete trade
+              </button>
+            )
+          ) : (
+            <div />
+          )}
+          <div style={{ display: "flex", gap: 10 }}>
+            <button style={styles.cancelBtn} onClick={onClose}>Cancel</button>
+            <button style={{ ...styles.addBtn, opacity: canSave ? 1 : 0.5 }} onClick={handleSave} disabled={!canSave}>
+              {isEditing ? "Update trade" : "Save trade"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -802,6 +1044,13 @@ const styles = {
     cursor: "pointer",
     padding: 2,
   },
+  editBtn: {
+    background: "transparent",
+    border: "none",
+    color: "#8C97AF",
+    cursor: "pointer",
+    padding: 2,
+  },
   modalOverlay: {
     position: "fixed",
     inset: 0,
@@ -885,6 +1134,136 @@ const styles = {
     color: "#0B1220",
     fontWeight: 700,
   },
+  legsWrap: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 10,
+  },
+  legCard: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 6,
+    background: "#0D1526",
+    border: "1px solid #1c2740",
+    borderRadius: 8,
+    padding: 8,
+  },
+  legTopRow: {
+    display: "flex",
+    gap: 6,
+  },
+  legRow: {
+    display: "flex",
+    gap: 6,
+    alignItems: "center",
+  },
+  legSegmented: {
+    display: "flex",
+    border: "1px solid #24314A",
+    borderRadius: 6,
+    overflow: "hidden",
+    flexShrink: 0,
+    flex: 1,
+  },
+  legSegBtn: {
+    flex: 1,
+    background: "#0F1728",
+    border: "none",
+    color: "#8C97AF",
+    padding: "9px 6px",
+    fontSize: 12,
+    cursor: "pointer",
+    fontFamily: "'Inter', sans-serif",
+  },
+  legInput: {
+    flex: 1,
+    minWidth: 0,
+    background: "#0F1728",
+    border: "1px solid #24314A",
+    borderRadius: 6,
+    padding: "9px 8px",
+    color: "#EDEFF4",
+    fontSize: 13,
+    fontFamily: "'JetBrains Mono', monospace",
+  },
+  legRemoveBtn: {
+    flexShrink: 0,
+    background: "transparent",
+    border: "1px solid #24314A",
+    borderRadius: 6,
+    color: "#8C97AF",
+    padding: 8,
+    cursor: "pointer",
+  },
+  legScissorsBtn: {
+    flexShrink: 0,
+    background: "transparent",
+    border: "1px solid #24314A",
+    borderRadius: 6,
+    color: "#8C97AF",
+    padding: 8,
+    cursor: "pointer",
+  },
+  legScissorsActive: {
+    background: "#F2B70522",
+    border: "1px solid #F2B705",
+    color: "#F2B705",
+  },
+  legHint: {
+    fontSize: 11,
+    color: "#8C97AF",
+    display: "flex",
+    alignItems: "center",
+    gap: 4,
+    paddingTop: 2,
+  },
+  outcomeGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: 10,
+    marginBottom: 6,
+  },
+  outcomeCard: {
+    background: "#0D1526",
+    border: "1px solid #24314A",
+    borderRadius: 8,
+    padding: "12px 10px",
+    textAlign: "left",
+    cursor: "pointer",
+  },
+  outcomeLabel: {
+    fontSize: 10,
+    letterSpacing: 0.8,
+    color: "#8C97AF",
+    fontWeight: 600,
+    marginBottom: 6,
+  },
+  outcomeValue: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: 18,
+    fontWeight: 700,
+  },
+  outcomeSub: {
+    fontSize: 11,
+    color: "#8C97AF",
+    marginTop: 4,
+    fontFamily: "'JetBrains Mono', monospace",
+  },
+  addLegBtn: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 6,
+    background: "transparent",
+    border: "1px dashed #24314A",
+    borderRadius: 6,
+    color: "#F2B705",
+    padding: "9px 12px",
+    fontSize: 12.5,
+    fontWeight: 600,
+    cursor: "pointer",
+    fontFamily: "'Inter', sans-serif",
+  },
   checkboxRow: {
     display: "flex",
     alignItems: "center",
@@ -895,9 +1274,55 @@ const styles = {
   },
   modalFooter: {
     display: "flex",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
+    alignItems: "center",
     gap: 10,
     marginTop: 20,
+    flexWrap: "wrap",
+  },
+  deleteTradeBtn: {
+    display: "flex",
+    alignItems: "center",
+    gap: 6,
+    background: "transparent",
+    border: "1px solid #E85D5D55",
+    color: "#E85D5D",
+    borderRadius: 6,
+    padding: "9px 14px",
+    fontSize: 13,
+    fontWeight: 600,
+    cursor: "pointer",
+    fontFamily: "'Inter', sans-serif",
+  },
+  deleteConfirmRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: 8,
+    flexWrap: "wrap",
+  },
+  deleteConfirmText: {
+    fontSize: 12.5,
+    color: "#E85D5D",
+    fontWeight: 600,
+  },
+  deleteConfirmYes: {
+    background: "#E85D5D",
+    color: "#0B1220",
+    border: "none",
+    borderRadius: 6,
+    padding: "7px 12px",
+    fontSize: 12.5,
+    fontWeight: 700,
+    cursor: "pointer",
+  },
+  deleteConfirmNo: {
+    background: "transparent",
+    border: "1px solid #24314A",
+    color: "#8C97AF",
+    borderRadius: 6,
+    padding: "7px 12px",
+    fontSize: 12.5,
+    cursor: "pointer",
   },
   cancelBtn: {
     background: "transparent",
